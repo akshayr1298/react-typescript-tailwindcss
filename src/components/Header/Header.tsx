@@ -1,7 +1,6 @@
 import React from "react";
 import headerLogo from "../../assets/instagram.png";
 
-
 const Header = () => {
   const reload = () => {
     window.location.reload();
@@ -9,10 +8,12 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-neutral-800 w-full min-h-14 flex justify-around grid-cols-3">
+      <div className="bg-neutral-800 w-full min-h-14 flex justify-around sm:justify-around sm:grid sm:grid-cols-3">
+      
+      /
         <div className="w-full flex">
           <button
-            className="flex items-center justify-center px-4  bg-neutral-800 text-white rounded-md mx-9"
+            className="flex items-center justify-center px-4  bg-neutral-800 text-white rounded-md mx-9 sm:mx-0"
             onClick={reload}
           >
             <img src={headerLogo} alt="Logo" className="h-8 w-8 mr-2" />
@@ -21,7 +22,9 @@ const Header = () => {
             AMIGO
           </p>
         </div>
-        <div className="w-full flex justify-around">
+
+
+        <div className="w-full flex justify-around hidden sm:flex justify-around flex-1">
           <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
             Home
           </p>
@@ -32,7 +35,7 @@ const Header = () => {
             Contact
           </p>
         </div>
-        <div className="w-full flex justify-around">
+        <div className="hidden sm:flex justify-around">
           <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
             Profile
           </p>

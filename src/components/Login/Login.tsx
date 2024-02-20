@@ -19,7 +19,6 @@ const Login = () => {
         ...formData,
         [e.target.name]: e.target.value,
       });
-      console.log("handlechange", formData);
     } catch (error) {
       console.log("error", error);
     }
@@ -27,7 +26,6 @@ const Login = () => {
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     try {
       e.preventDefault();
-      console.log("handleSubmit", formData);
       setFormData({
         email: "",
         password: "",

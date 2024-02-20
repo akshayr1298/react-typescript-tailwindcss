@@ -1,12 +1,13 @@
 import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
     <>
-    <Header/>
-      <p className="text-center text-green-700 mt-5">
-        So I started to walk into the water...
-      </p>
+      <Header />
+      <div className="flex justify-center mt-8">
+        <Login />
+      </div>
     </>
   );
 }

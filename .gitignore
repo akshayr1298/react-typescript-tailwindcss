@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Package manager lock files
+yarn.lock
+
+# Environment variables
+.env.local
+.env

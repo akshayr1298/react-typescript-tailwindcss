@@ -1,12 +1,20 @@
-import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <>
-    <Header/>
-      <p className="text-center text-green-700 mt-5">
-        So I started to walk into the water...
-      </p>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
+        </Routes>
+      </Router>
+
+    </div>
+     
     </>
   );
 }

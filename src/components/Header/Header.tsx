@@ -1,16 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import headerLogo from "../../assets/instagram.png";
-
 
 const Header = () => {
   const reload = () => {
     window.location.reload();
   };
-// const apiKey = import.meta.env.VITE_API_KEY  // import .env file
+  const navigate = useNavigate();
+  const handleSignInClick = () => {
+    navigate("/login");
+  };
 
   return (
     <>
       <div className="bg-neutral-800 w-full min-h-14 flex justify-around  sm:justify-around sm:grid sm:grid-cols-3">
-
         <div className="flex items-center">
           <button
             className="flex items-center justify-center px-4 bg-neutral-800 text-white rounded-md mx-9 sm:mx-0"
@@ -25,7 +27,7 @@ const Header = () => {
 
         <div className="hidden sm:flex justify-around flex-1">
           <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
-            Home 
+            Home
           </p>
           <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
             About us
@@ -35,9 +37,15 @@ const Header = () => {
           </p>
         </div>
         <div className="hidden sm:flex justify-around">
-          <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
-            Profile
-          </p>
+          {/* <p className="text-white font-semibold mt-3 cursor-pointer transition-colors duration-300 cursor-pointer hover:text-green-500">
+            SignIn/SignUp
+          </p> */}
+          <button
+            className="flex items-center justify-center px-4 bg-neutral-800 text-white font-semibold rounded-md mx-9 sm:mx-0 transition-colors duration-300 hover:text-green-500"
+            onClick={handleSignInClick}
+          >
+            SignIn
+          </button>
         </div>
       </div>
     </>

@@ -1,13 +1,20 @@
-import Header from "./components/Header/Header";
-import Login from "./components/Login/Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <>
-      <Header />
-      <div className="flex justify-center mt-8">
-        <Login />
-      </div>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
+        </Routes>
+      </Router>
+
+    </div>
+     
     </>
   );
 }
